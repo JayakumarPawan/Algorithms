@@ -1,0 +1,6 @@
+Number of pennies detected: 15
+Number of nickels detected: 26
+Number of dimes detected: 25
+Number of quarters detected: 57
+Number of half dollars detected: 11
+Total value of coins: 2370 cents

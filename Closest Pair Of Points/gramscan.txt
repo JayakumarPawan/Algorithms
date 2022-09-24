@@ -1,0 +1,18 @@
+find the bottom
+draw horizontal line
+sort points by polar angle (use cosine)
+
+use stack and put first 2 elements
+for( i = index 2 to the end)
+	current = vector[i]
+	prev= stack.pop()
+	(A) oneBeforePrev= stack.pop() //or peek
+	if isLeftTurn(oneBeforePrev,prev,current) //not straight
+		stack.push( oneBeforePrev,prev,current)
+
+	else: //right or co-linear
+		prev = oneBeforePrev
+		oneBeforePrev = stack.pop()
+		go to A
+end for loop
+

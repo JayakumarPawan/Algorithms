@@ -1,0 +1,12 @@
+shape is convex if for every pair of points, the line segment formed between them is bounded by the shape
+
+look at wikipedia
+Quick hull: 
+	avg O(nlogn) worst o(n^2) 
+	recursive
+graham hull
+	always O(nlogn)
+
+make ppm with 50 points and the convex hull
+shape is represented by a vector of points (order matters)
+

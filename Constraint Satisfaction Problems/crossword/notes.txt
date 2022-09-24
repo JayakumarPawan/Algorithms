@@ -1,0 +1,72 @@
+def find_options_for_all_locations(pzl, letter_frequency):
+    final options  = [] # pos: list of tuples where first element is orientation 2nd is word 3rd is position
+    for position in len(pzl):
+        pos_options = []
+        w_h = True #  possible to put a word horizontally
+        w_v = True #  possible for vertical
+        if pzl[position] == BLOCK:
+            continue
+
+        # find the closest obstacle in right or down (border or block):
+        max_len_H = min(pzl.find(BLOCK,position),position - position%WIDTH + WIDTH) - position
+        vertical_slice = pzl[slice(position,len(pzl), WIDTH)]
+        max_len_V = min(position + vertical_slice.find(BLOCK) * WIDTH, 1 + position + WIDTH * (HEIGHT - position//WIDTH - 1)) // WIDTH - position //WIDTH
+        if max_len_V < 3:
+            w_v = False
+        if max_len_H < 3:
+            w_h = False
+        if not w_h or w_v:
+            continue
+
+        # find the first open spot in the range(position: closest obstacle):
+        if w_h:
+            open_spot_H = pzl.find(SPACE,position)
+        if w_v:
+            open_spot_V = vertical_slice.find(SPACE) * WIDTH + position
+
+        # create tokens:
+        if w_h:
+            token_H = pzl[position:open_spot]
+        if w_v:
+            token_V = pzl[slice(position, open_spot_V+1, WIDTH)]
+        if len(token_H) > 3:
+            w_h = False
+        if len(token_V) > 3:
+            w_v = False
+        if not w_h or w_v:
+            continue
+
+        # options = all words that start with token and are small enough:
+        if w_h:
+            options_h = set{}
+            for i, wrds in WORDS[token_h].items():
+                if i < max_len_H:
+                    options_h |= wrds
+        if w_v:
+            options_v = set{}
+            for i, wrds in WORDS[token_v].items():
+                if i < max_len_V:
+                    options_v |= wrds
+
+
+        # ensure word matches existing stuff if so add to final options
+        for word in options_h:
+            for i, letter in enumerate(word):
+                if pzl[position+i] == letter or pzl[position+i] == SPACE:
+                    final_options[position].append(('H', word, position))
+
+        for word in options_v:
+            for i, letter in enumerate(word):
+                if pzl[positions + WIDTH * i] == letter or pzl[position + WIDTH * i] == SPACE:
+                    final_options[position].append(('V', word, position))
+
+        # sort words based on freq of letters (sum([frequency(letter) for letter in word]))
+
+    # sort final_options tuples by the number of options
+    final_options.sort(key = lambda x: len(x[1]))
+    return final_options
+
+for pos_options in final_options:
+    for word in pos_options
+    make sub_pzl
+    if it works: return pzl

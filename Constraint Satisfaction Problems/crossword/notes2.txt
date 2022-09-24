@@ -1,0 +1,57 @@
+https://www.youtube.com/watch?v=J3tgQujTai4
+https://www.youtube.com/watch?v=TIthXhCSgPE
+https://www.youtube.com/watch?v=K_7To_y9IAM
+https://www.youtube.com/watch?v=BMgYsrajSXk
+https://www.youtube.com/watch?v=tVXQvw46JEo
+https://www.youtube.com/watch?v=_xbiiB9ZiKc
+https://www.youtube.com/watch?v=b4Rcv5aBkdM
+https://www.youtube.com/watch?v=WDafr0p8ays
+https://www.youtube.com/watch?v=7-JkKZiedL8
+https://www.youtube.com/watch?v=_9hmkI3rlk0
+https://www.youtube.com/watch?v=0YF8vecQWYs
+https://www.youtube.com/watch?v=GQ3V50XoLOM
+https://www.youtube.com/watch?v=HIRiduzNLzQ
+https://www.youtube.com/watch?v=5EgUeZHVHNI
+https://www.youtube.com/watch?v=j8L9I5b8oyw
+https://www.youtube.com/watch?v=XymRwmTv8xw
+https://www.youtube.com/watch?v=Ru1X27ZMTAE
+https://www.youtube.com/watch?v=bCnSt_3ar9I
+https://www.youtube.com/watch?v=Fnvjr1sTDNg
+https://www.youtube.com/watch?v=PgMSpX8mjJE
+https://www.youtube.com/watch?v=DkAyAvKMFP4
+https://www.youtube.com/watch?v=p-Jly1jmkwE
+
+travel case for utensils + box for an apple -> no need for lunch box which is bulky
+
+
+cap   s
+      s
+net   s
+
+# make a dict of pre-fixes and the set of words  that begin with that prefix ✔
+prefixes = {}
+for word in words:
+	for i in range(len(word):
+		if word[:i] in prefixes:
+			prefixes[word[:i]].add(word)
+		else:
+			prefixes[word[:i] = {word}
+# every time a word is placed, remove it from this set✔
+for i in range(len(word):
+	if word[:i] in dict:
+		dict[word[:i]].remove(word)
+
+
+# make an array showing where words start and end✔
+#update this every time a word is placed/removed✔
+
+# when placing a word in orientation o (Horiz or Vertical) p = the other orientation:
+
+use = False
+for every letter:
+	word_fragment_start = rfind "pe" along axis p starting at letter position
+	word_fragment_end = find "ps"	
+	for every word of length end-start
+		if fragment aligns with a word:
+			use = True
+			break
